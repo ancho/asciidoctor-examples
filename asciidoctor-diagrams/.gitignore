@@ -1,0 +1,6 @@
+.lazybones
+.gradle
+.idea
+*.iws
+*.ipr
+*.iml
