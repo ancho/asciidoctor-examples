@@ -1,14 +1,6 @@
 apply plugin: 'org.asciidoctor.gradle.asciidoctor'
-//apply plugin: 'com.lookout.jruby'
-
-//dependencies {
-//    // FIXME installs asciidoctor transitively; figure out how to exclude it (since AsciidoctorJ provides it already)
-//    gems group: 'rubygems', name: 'asciidoctor-diagram', version: '1.2.0'
-//}
 
 asciidoctor {
-//    dependsOn jrubyPrepareGems
-    // set gemPath to null to isolate, System.getenv()['GEM_PATH'] to use external gem environment
     gemPath = file('/var/lib/gems/1.9.1')
     requires = ['asciidoctor-diagram']
     outputDir = new File("$buildDir/docs")
