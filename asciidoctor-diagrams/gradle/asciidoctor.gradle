@@ -1,7 +1,6 @@
 apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 
 asciidoctor {
-    gemPath = file('/var/lib/gems/1.9.1')
     requires = ['asciidoctor-diagram']
     outputDir = new File("$buildDir/docs")
     options = [
@@ -17,3 +16,25 @@ asciidoctor {
         ]
     ]
 }
+
+task determineGemPath() {
+
+    doLast{
+        def gem_path = project.hasProperty('gemPath') ? project.gemPath : System.env["GEM_PATH"]
+                
+        if ( !gem_path ) {
+            def msg = """
+                     
+                Set GEM_PATH to your ruby gems location. (ex: export GEM_PATH=/var/lib/gems/1.9.1/)
+                Or add the Property gemPath to gradle.properties
+            """
+            println msg 
+            gem_path = 'vendor'
+        }
+        
+        asciidoctor.gemPath = file(gem_path)
+    }
+    
+}
+
+asciidoctor.dependsOn determineGemPath
