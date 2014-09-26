@@ -2,7 +2,7 @@ apply plugin: 'org.asciidoctor.gradle.asciidoctor'
 
 asciidoctor {
     requires = ['asciidoctor-diagram']
-    outputDir = new File("$buildDir/docs")
+    outputDir = file("$buildDir/docs")
     options = [
         attributes: [
             'source-highlighter': 'coderay',
@@ -12,9 +12,12 @@ asciidoctor {
             toc: 'left',
             idprefix: '',
             idseparator: '-',
-            linkcss: true
+            linkcss: 'true',
+            icons: 'font',
+            imagesdir: "$outputDir/images"
         ]
     ]
+    logDocuments = true
 }
 
 task determineGemPath() {
