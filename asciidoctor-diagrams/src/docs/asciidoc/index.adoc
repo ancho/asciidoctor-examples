@@ -1,5 +1,7 @@
 = asciidoctor-diagrams
 
+Using asciidoctorj version {asciidoctor-version}
+
 == Diagramme
 
 Ich komme ja in letzter Zeit vor Begeisterung nicht mehr ganz klar, muss ich zugeben.

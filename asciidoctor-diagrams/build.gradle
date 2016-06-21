@@ -1,8 +1,14 @@
-plugins {
-    id "org.asciidoctor.gradle.asciidoctor" version "1.5.0"
+buildscript {
+  repositories {
+    mavenLocal()
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+  }
 }
 
 //externalized pligin configurtation
 apply from: 'gradle/asciidoctor.gradle'
 apply plugin: 'idea'
-
