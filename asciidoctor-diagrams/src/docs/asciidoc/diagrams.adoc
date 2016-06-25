@@ -1,17 +1,15 @@
-== Diagramme
+== Diagrams
 
-Ich komme ja in letzter Zeit vor Begeisterung nicht mehr ganz klar, muss ich zugeben.
-Jeden Tag entdecke ich ein neues Tool, oder ein faszinierendes Plugin für ein Tool das ich bereits verwende.
+Describing diagrams in asciidoctor with plantuml is awesome!
+See https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor Diagram Extension] for more information.
 
-So auch die https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor Diagram Erweiterung] auf die ich sehr gespannt bin.
+== Examples
 
+=== Plantuml
 
+Stolen from the {plantuml-url}[plantuml] homepage :)
 
-== Beispiele
-
-=== Plantum
-
-Geklaut aus der Projekt-README :)
+==== Classdiagram
 
 ["plantuml", "asciidoctor-diagram-classes", "png"]
 ---------------------------------------------------------------------
@@ -25,7 +23,7 @@ DiagramBlock <|-- DitaaBlock
 DiagramBlock <|-- PlantUmlBlock
 ---------------------------------------------------------------------
 
-=== Sequenzdiagramm
+=== Sequencediagram
 
 ["plantuml", "sequenz", "png"]
 ---------------------------------------------------------------------

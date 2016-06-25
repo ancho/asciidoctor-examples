@@ -1,4 +1,4 @@
-= ${projectName}
+= Asciidoctor diagram Example
 :plantuml-url: http://plantuml.sourceforge.net
 
 Using asciidoctorj version {asciidoctor-version}
