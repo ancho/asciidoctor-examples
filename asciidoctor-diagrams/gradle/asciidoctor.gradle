@@ -48,6 +48,14 @@ task asciidocPdf(type: AsciidoctorTask, group: "documentation") {
     attributes imagesdir: "${buildDir}/images"
 }
 
+task copyImages(type: Copy, group: "copy") {
+    description "Copy images form asciidoctor sourceDir to the build directory."
+
+    from "${asciidoctor.sourceDir}/images"
+    into "${buildDir}/images"
+}
+
 task docs(group: "documentation", description: "run documentation tasks")
 
+asciidocPdf.dependsOn copyImages
 docs.dependsOn asciidocPdf, asciidocHtml
